@@ -2,11 +2,7 @@ import enums
 import sys
 import enums
 import os
-import psutil
-
-parent_pid = os.getppid()
-print(psutil.Process(parent_pid).name())
-# IS_CMD = psutil.Process(parent_pid).name() == "win32"
+import colorama
 
 FAILURE_BASE = '[FAILURE]'
 SUCCESS_BASE = '[SUCCESS]'
@@ -26,6 +22,7 @@ TRACE_PREFIX   = f'{enums.Colors.MAGENTA.value}{TRACE_BASE}{enums.Colors.RESET.v
 
 class Logger:
     def __init__(self, log_level):
+        colorama.init()
         if log_level == 'NONE':
             self.LOG_LEVEL = enums.LogLevel.NONE.value
         elif log_level == 'FAILURE':

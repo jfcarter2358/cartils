@@ -44,6 +44,7 @@ class RLE:
             out = ['0'] + out
         return '.'.join(out)
 
+    @staticmethod
     def decodes(data):
         arr = data.split('.')
         out = ''
@@ -66,10 +67,12 @@ class RLE:
             rle_mode = not rle_mode
         return out
 
+    @staticmethod
     def encode(data, file_obj):
         encoded = RLE.encodes(data)
         file_obj.write(encoded)
 
+    @staticmethod
     def decode(file_obj):
         data = file_obj.read()
         decoded = RLE.decodes(data)
