@@ -1,3 +1,3 @@
-import cartils
-
-print(cartils.generators.quote(kind='any'))
+import sys
+from cartils import generators
+print(generators.quote(kind=sys.argv[1]))
