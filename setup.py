@@ -11,10 +11,10 @@ setuptools.setup(
     version=version,
     author="John Carter",
     author_email="jfcarter2358@gmail.com",
-    description="A collection of useful Python utilitiess",
+    description="A collection of useful Python utilities",
     long_description=long_description,
     long_description_content_type="text/markdown",
     url="https://github.com/jfcarter2358/cartils",
     packages=setuptools.find_packages(),
-    python_requires=">=3.8",
+    python_requires=">=3.7",
 )
