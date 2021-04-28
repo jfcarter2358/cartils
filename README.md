@@ -2,11 +2,10 @@
 
 ## To Do
 - [x] RLE encoding
-- [x] animation
-    - [x] sync
-    - [x] async
-    - [x] looping
-- [ ] Logger
-    - [ ] Remove coloring if on command prompt
-- [ ] Check if program installed
-- [ ] Run external program
+- [x] Animation
+    - [x] Sync
+    - [x] Async
+    - [x] Looping
+- [x] Logger
+- [x] Check if program installed
+- [x] Run external program

@@ -1,4 +1,11 @@
+"""
+This class handles Run Length Encoding (RLE) encoding and decoding
+"""
 class RLE:
+    """
+    Encode a string with RLE
+    Output is in alternating block of runs of spaces and direct copies in hex format
+    """
     @staticmethod
     def encodes(data):
         arr = list(data)
@@ -44,6 +51,9 @@ class RLE:
             out = ['0'] + out
         return '.'.join(out)
 
+    """
+    Decode a RLE string
+    """
     @staticmethod
     def decodes(data):
         arr = data.split('.')
