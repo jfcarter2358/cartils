@@ -1,6 +1,5 @@
-import enums
 import sys
-import enums
+import cartils.enums as enums
 import os
 import colorama
 

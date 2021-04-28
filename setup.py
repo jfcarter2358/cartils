@@ -17,4 +17,7 @@ setuptools.setup(
     url="https://github.com/jfcarter2358/cartils",
     packages=setuptools.find_packages(),
     python_requires=">=3.7",
+    install_requires=[
+        'colorama==0.4.4'
+    ]
 )
