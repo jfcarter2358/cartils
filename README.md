@@ -1,5 +1,7 @@
 # Cartils
 
+Cartils is a simple utility package full of various useful and not-so-useful functions
+
 ## To Do
 - [x] RLE encoding
 - [x] Animation
