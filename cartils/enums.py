@@ -36,3 +36,16 @@ class Colors(BaseEnum):
     BOLD      = '\033[1m'
     UNDERLINE = '\033[4m'
     REVERSED  = '\033[7m'
+
+@unique
+class Html(BaseEnum):
+    """Represents the terminal formatting commands"""
+
+    BLACK     = '#000000'
+    RED       = '#ff0000'
+    GREEN     = '#00ff00'
+    YELLOW    = '#ffff00'
+    BLUE      = '#0000ff'
+    MAGENTA   = '#ff00ff'
+    CYAN      = '#00ffff'
+    WHITE     = '#ffffff'
