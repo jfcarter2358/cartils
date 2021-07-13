@@ -32,7 +32,6 @@ def get_from_key_list(data, keys):
 
 def set_from_key_list(data, keys, value):
     is_dict = not (keys[0][0] == '[' and keys[0][-1] == ']')
-    print(is_dict)
     if is_dict:
         if data == None:
             data = {}
