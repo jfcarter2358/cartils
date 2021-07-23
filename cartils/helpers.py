@@ -24,6 +24,8 @@ def get_from_key_list(data, keys):
         # if we aren't at the last key then go a level deeper
         return get_from_key_list(data[keys[0]], keys[1:])
     else:
+        if type(data) != dict:
+            return None
         # if the key doesn't exist then return None
         if not keys[0] in data.keys():
             return None
