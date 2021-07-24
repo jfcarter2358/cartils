@@ -1,6 +1,6 @@
 import time
 import cartils.enums as enums
-import encoding
+import cartils.encoding as encoding
 import multiprocessing
 
 class Animation:
