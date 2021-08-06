@@ -6,6 +6,9 @@ with open("README.md", "r") as f:
 with open("cartils/VERSION", "r") as f:
     version = f.read()
 
+with open("requirements.txt", "r") as f:
+    requirements = f.read().split('\n')
+
 setuptools.setup(
     name="cartils",
     version=version,
@@ -17,7 +20,5 @@ setuptools.setup(
     url="https://github.com/jfcarter2358/cartils",
     packages=setuptools.find_packages(),
     python_requires=">=3.7",
-    install_requires=[
-        'colorama==0.4.4'
-    ]
+    install_requires=requirements
 )
