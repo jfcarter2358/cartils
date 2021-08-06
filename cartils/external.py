@@ -1,10 +1,13 @@
 import os
 import subprocess
 
-def cmd(cmd, redirect=False):
+def cmd(cmd, redirect=False, silence_errors=False):
     # create a subprocess to run the command
     if redirect:
-        p = subprocess.Popen(cmd, shell=True, stdout=subprocess.PIPE)
+        if silence_errors:
+            p = subprocess.Popen(cmd, shell=True, stdout=subprocess.PIPE, stderr=subprocess.DEVNULL)
+        else:
+            p = subprocess.Popen(cmd, shell=True, stdout=subprocess.PIPE)
         # wait for it to finish and grab the output
         output = p.communicate()[0].decode()
         # grab and return the exit code
@@ -29,3 +32,5 @@ def check_program(program):
 
 if __name__ == '__main__':
     print(check_program('python'))
+    print(cmd('docker info', redirect=True))
+    print(cmd('docker info', redirect=True, silence_errors=True))
