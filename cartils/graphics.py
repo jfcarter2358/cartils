@@ -2,6 +2,7 @@ import time
 import cartils.enums as enums
 import cartils.encoding as encoding
 import multiprocessing
+import cursor
 
 class Animation:
     def __init__(self):
@@ -24,6 +25,7 @@ class Animation:
         }
 
     def run(self, frame_count=-1, refresh_rate=0.25, loop=False):
+        cursor.hide()
         i = 0
         counter = 0
         while counter < frame_count:
@@ -42,6 +44,7 @@ class Animation:
                     counter = -1
                     i = 0
             counter += 1
+        cursor.show()
             
     def run_async(self, frame_count=-1, refresh_rate=0.25, loop=False):
         self.animation_process = None
@@ -72,10 +75,10 @@ class Animation:
 
 if __name__ == '__main__':
     ff = Animation()
-    ff.read_animation('credits.txt', 14)
+    ff.read_animation('resources/credits.txt', 14)
     ff.run(frame_count=24)
     print('Now add a little bit of _spice_')
-    ff.read_animation('credits.rle', 14, rle=True)
+    ff.read_animation('resources/credits.rle', 14, rle=True)
     ff.run(frame_count=24)
     print('now for some async')
     ff.run_async(frame_count=24)
