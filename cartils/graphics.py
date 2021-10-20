@@ -45,15 +45,16 @@ class Animation:
                     i = 0
             counter += 1
         cursor.show()
-            
+
     def run_async(self, frame_count=-1, refresh_rate=0.25, loop=False):
         self.animation_process = None
         self.animation_process = multiprocessing.Process(target=self.run, args=(frame_count, refresh_rate, loop))
         self.animation_process.start()
-                
+
     def stop_async(self):
         if self.animation_process:
             self.animation_process.terminate()
+        cursor.show()
 
     def read_animation(self, f_name, line_count, skip_line=True, rle=False):
         with open(f_name) as f:
